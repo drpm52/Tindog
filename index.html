@@ -7,13 +7,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Tindog</title>
   </head>
   <body>
+    <div class="container">
+      <!-- header -->
+      <header class="row">
+        <!-- <div class="icons-container row"> -->
+
+        <div class="profile header-icons">
+          <img src="./images/icon-profile.png" alt="profile icon-profile" />
+        </div>
+        <div class="logo header-icons">
+          <img src="./images/logo.png" alt="logo with a paw print" />
+        </div>
+        <div class="chat header-icons">
+          <img src="./images/icon-chat.png" alt="chat icon" />
+        </div>
+        <!-- </div> -->
+      </header>
+
+      <!-- dog image -->
+
+      <section class="main-picture row col">
+        <!-- hidden nope and like stamps -->
+        <div class="nope hidden">
+          <img
+            src="./images/badge-nope.png"
+            alt="a red square with word nope"
+          />
+        </div>
+        <div class="yes hidden">
+          <img
+            src="./images/badge-like.png"
+            alt="a red square with word nope"
+          />
+        </div>
+        <h2 class="name-age">Teddy, 10</h2>
+        <p class="dog-message">How you doing?</p>
+      </section>
+
+      <!-- lower section with buttons -->
+      <div class="btns row center">
+        <button class="cross row center">
+          <img
+            class="cross-icon"
+            src="./images/icon-cross.png"
+            alt="button with cross icon"
+          />
+        </button>
+        <button class="heart row center">
+          <img
+            class="heart-icon"
+            src="./images/icon-heart.png"
+            alt="button with heart icon"
+          />
+        </button>
+      </div>
+    </div>
     <script defer src="./index.js" type="module"></script>
   </body>
 </html>

@@ -1,9 +1,100 @@
-*, *::after, *::before{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;  
+body {
+  font-family: "Poppins", sans-serif;
+}
+header {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.row {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.header-icons img {
+  display: inline-block;
+  width: 1.3rem;
+}
+.logo img {
+  width: 3rem;
+}
+
+.main-picture {
+  background: url("./images/dog-rex.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  color: whitesmoke;
+  text-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+  padding: 1em;
+
+  justify-content: flex-end;
+  border-radius: 3%;
+}
+.main-picture p {
+  font-weight: 200;
+}
+.btns {
+  gap: 1em;
+}
+.heart,
+.cross {
+  border-radius: 50%;
+  border: none;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.heart img,
+.cross img {
+  width: 1.3rem;
+}
+
+.heart:focus,
+.heart:hover {
+  background-color: rgb(219, 255, 244);
+  box-shadow: 0 10px 20px rgba(204, 241, 230, 1);
+}
+.cross:hover,
+.cross:focus {
+  background-color: rgb(255, 231, 239);
+  box-shadow: 0 10px 20px rgba(237, 217, 223, 1);
+}
+.nope,
+.yes {
+  transform: rotate(-15deg);
+  align-self: flex-start;
+  position: absolute;
+  top: 10%;
+  z-index: 1;
+}
+.nope img,
+.yes img {
+  width: 40%;
 }
