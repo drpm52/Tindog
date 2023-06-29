@@ -23,5 +23,5 @@ const dogs = [
         hasBeenLiked: false
     }
 ]
-
+export default dogs
 // Remember to export the data!
