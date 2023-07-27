@@ -2,34 +2,24 @@
 
 import { dogs } from "./data.js";
 class Dog {
-  constructor(dog) {
-    Object.assign(this, dog);
+  constructor(data) {
+    Object.assign(this, data);
   }
 
-  nextDog() {
-    const next = dogs.length > 0 ? dogs.shift() : "";
-    return next;
-  }
-
-  dogHtml() {
-    const next = new Dog(this.nextDog());
-    const nextdogHtml = `
-    <h2 class="name-age">
-      ${next.name}, ${next.age}
+  getDogCard() {
+    const { name, age, bio } = this;
+    const dogCard = `<h2 class="name-age">
+      ${name}, ${age}
     </h2>
-    <p class="dog-message">How you doing?</p>
+    <p class="dog-message">${bio}</p>
   `;
-    if (next) {
-      document.querySelector(
-        ".main-picture"
-      ).style.backgroundImage = `url(${next.avatar})`;
-      document.querySelector( ".main-picture").innerHTML = 
-      nextdogHtml;
-    } else {
-      document.querySelector(
-        ".main-picture"
-      ).innerHTML = `<h1 class="no-dogs">We ran out of dogs!😕</h1>`;
-    }
+
+    return dogCard;
+  }
+  getDogHTML() {
+    const mainPicture = document.querySelector(".main-picture");
+    mainPicture.innerHTML = this.getDogCard();
+    mainPicture.style.background = `url(${this.avatar})`;
   }
 }
 

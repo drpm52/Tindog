@@ -26,7 +26,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-.hidden {
+.hide {
   display: none;
 }
 .container {
@@ -44,11 +44,13 @@ header {
 }
 
 .main-picture {
-  background: url("./images/dog-rex.jpg");
-  background-size: cover;
-  background-position: center center;
+  background: url("images/dog-rex.jpg") ;
+  background-size:cover;
+  background-position:contain;
   background-repeat: no-repeat;
   min-height: 80vh;
+  
+
   color: whitesmoke;
   text-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
   padding: 1em;
@@ -92,12 +94,16 @@ header {
   align-self: flex-start;
   position: absolute;
   top: 10%;
-  z-index: 1;
+  z-index: 100;
 }
-.nope img,
-.yes img {
+#nope-img,
+#yes-img {
   width: 40%;
 }
 .no-dogs{
-  color:darkgray;
+  color:darkgrey;
+ 
+}
+.hidden{
+  display:none;
 }

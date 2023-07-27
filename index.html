@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
     <title>Tindog</title>
   </head>
   <body>
@@ -33,35 +34,36 @@
 
       <!-- dog image -->
 
-      <section class="main-picture row col">
-        
+      <div class="main-picture row col">
         <!-- hidden nope and like stamps -->
-        <div class="nope hidden">
+        <div class="nope hidden" id="nope" >
           <img
             src="./images/badge-nope.png"
             alt="a red square with word nope"
+            id="nope-img"
           />
         </div>
-        <div class="yes hidden">
+        <div class="yes  hidden" id="yes">
           <img
+            id="yes-img"
             src="./images/badge-like.png"
             alt="a red square with word nope"
           />
         </div>
         <!-- <h2 class="name-age">Teddy, 10</h2>
         <p class="dog-message">How you doing?</p> -->
-      </section>
+      </div>
 
       <!-- lower section with buttons -->
       <div class="btns row center">
-        <button class="cross row center" id="cross">
+        <button class="cross row center cross-icon" id="cross">
           <img
             class="cross-icon"
             src="./images/icon-cross.png"
             alt="button with cross icon"
           />
         </button>
-        <button class="heart row center" id="heart">
+        <button class="heart heart-icon row center" id="heart">
           <img
             class="heart-icon"
             src="./images/icon-heart.png"
