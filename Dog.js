@@ -1,5 +1,6 @@
 "use strict";
-
+const mainPicture =document.querySelector(".main-picture")
+  ""
 import { dogs } from "./data.js";
 class Dog {
   constructor(dog) {
@@ -7,8 +8,9 @@ class Dog {
   }
 
   nextDog() {
-    const next = dogs.length > 0 ? dogs.shift() : "";
-    return next;
+    const newDog =  dogs.shift() 
+    dogs.push(newDog);
+    return newDog;
   }
 
   dogHtml() {
@@ -17,20 +19,15 @@ class Dog {
     <h2 class="name-age">
       ${next.name}, ${next.age}
     </h2>
-    <p class="dog-message">How you doing?</p>
+    <p class="dog-message">${next.bio}</p>
   `;
-    if (next) {
-      document.querySelector(
-        ".main-picture"
-      ).style.backgroundImage = `url(${next.avatar})`;
+   
+      mainPicture.style.backgroundImage = `url(${next.avatar})`;
       document.querySelector( ".main-picture").innerHTML = 
       nextdogHtml;
-    } else {
-      document.querySelector(
-        ".main-picture"
-      ).innerHTML = `<h1 class="no-dogs">We ran out of dogs!😕</h1>`;
-    }
-  }
+    } 
+   
+ 
 }
 
 export default Dog;
