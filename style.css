@@ -91,7 +91,7 @@ header {
   transform: rotate(-15deg);
   align-self: flex-start;
   position: absolute;
-  top: 10%;
+  top: 20%;
   z-index: 1000;
   width: 40%;
 
