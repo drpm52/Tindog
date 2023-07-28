@@ -28,7 +28,6 @@ header {
 }
 .hidden {
   display: none !important;
- 
 }
 .container {
   width: 90%;
@@ -94,13 +93,14 @@ header {
   position: absolute;
   top: 10%;
   z-index: 1000;
-  width:40%;
+  width: 40%;
 
-  /* display:inline; */
+  display: inline;
 }
-.yes-img, .nope-img {
-  width:100%;
+.yes-img,
+.nope-img {
+  width: 100%;
 }
-.no-dogs{
-  color:darkgray;
+.no-dogs {
+  color: darkgray;
 }
